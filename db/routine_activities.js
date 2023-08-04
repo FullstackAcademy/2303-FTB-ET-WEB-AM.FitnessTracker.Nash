@@ -5,7 +5,22 @@ async function addActivityToRoutine({
   activityId,
   count,
   duration,
-}) {}
+}) {
+  // console.log('Called addActivityToRoutine()')
+  try {
+    const { rows: [routineActivity] } = await client.query(`
+    INSERT INTO routine_activities ( "routineId", "activityId", count , duration)
+    VALUES($1, $2, $3, $4)
+    ON CONFLICT ("routineId", "activityId") DO NOTHING
+    RETURNING *;
+    `, [ routineId, activityId, count, duration]);
+    // console.log('Finished addActivityToRoutine()')
+    return routineActivity;
+  } catch (error) {
+    //console.log('Error addActivityToRoutine()')
+    throw error;
+  }
+}
 
 async function getRoutineActivityById(id) {}
 
