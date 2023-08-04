@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { tr } = require('faker/lib/locales');
 const client = require('./client');
 const { getUserById } = require('./users');
@@ -21,10 +22,18 @@ async function createActivity({ name, description }) { //Loops through the activ
     // console.log('Error Creating Activity')
     throw error;
   }
+=======
+const client = require('./client');
+
+// database functions
+async function createActivity({ name, description }) {
+  // return the new activity
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
 }
 
 async function getAllActivities() {
   // select and return an array of all activities
+<<<<<<< HEAD
   // console.log('Called getAllActivites')
   try {
     const {rows} = await client.query(`
@@ -67,6 +76,16 @@ async function getActivityByName(name) {
 async function attachActivitiesToRoutines(routines) {
 
 }
+=======
+}
+
+async function getActivityById(id) {}
+
+async function getActivityByName(name) {}
+
+// used as a helper inside db/routines.js
+async function attachActivitiesToRoutines(routines) {}
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
 
 async function updateActivity({ id, ...fields }) {
   // don't try to update the id

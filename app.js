@@ -3,6 +3,7 @@ const express = require("express")
 const app = express()
 
 // Setup your Middleware and API Router here
+<<<<<<< HEAD
 const { client } = require("./db");
 
 // Setup your Middleware and API Router here -------------
@@ -38,5 +39,7 @@ app.get("*", (req, res, next) => {
       message: "No route found for the requested URL",
     });
 });
+=======
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
 
 module.exports = app;

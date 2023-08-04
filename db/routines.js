@@ -1,5 +1,6 @@
 const client = require("./client");
 
+<<<<<<< HEAD
 async function createRoutine({ creatorId, isPublic, name, goal }) {
   // console.log('called createRoutine')
   try {
@@ -31,6 +32,13 @@ async function getRoutinesWithoutActivities() {
     throw error
   }
 }
+=======
+async function createRoutine({ creatorId, isPublic, name, goal }) {}
+
+async function getRoutineById(id) {}
+
+async function getRoutinesWithoutActivities() {}
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
 
 async function getAllRoutines() {}
 

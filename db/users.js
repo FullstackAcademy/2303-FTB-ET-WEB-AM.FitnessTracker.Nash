@@ -1,6 +1,7 @@
 const client = require("./client");
 
 // database functions
+<<<<<<< HEAD
 const bcrypt = require('bcrypt')
 SALT_COUNT = 10
 // user functions
@@ -16,6 +17,12 @@ async function createUser({ username, password }) { //Called 3 times, after mapp
   }catch(error){
     console.log('Error in createUser()')
   }
+=======
+
+// user functions
+async function createUser({ username, password }) {
+  
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
 }
 
 async function getUser({ username, password }) {
@@ -23,6 +30,7 @@ async function getUser({ username, password }) {
 }
 
 async function getUserById(userId) {
+<<<<<<< HEAD
   try {
     const {rows: [user]} = await client.query(`
       SELECT *
@@ -36,6 +44,8 @@ async function getUserById(userId) {
   } catch (error) {
     throw error;
   }
+=======
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
 
 }
 

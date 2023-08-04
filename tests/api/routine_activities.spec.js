@@ -26,7 +26,11 @@ const { objectContaining } = expect;
 
 describe("/api/routine_activities", () => {
   describe("PATCH /api/routine_activities/:routineActivityId (**)", () => {
+<<<<<<< HEAD
     it("Updates the count or duration on the routine activity", async () => {
+=======
+    xit("Updates the count or duration on the routine activity", async () => {
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
       const { fakeUser, token } = await createFakeUserWithToken("Smith");
       const fakeRoutine = await createFakePublicRoutine(
         fakeUser.id,
@@ -57,7 +61,11 @@ describe("/api/routine_activities", () => {
       expect(response.body).toMatchObject(updatedRoutineActivityData);
     });
 
+<<<<<<< HEAD
     it("should return an error if the owner of the routine isn't the one trying to edit it", async () => {
+=======
+    xit("should return an error if the owner of the routine isn't the one trying to edit it", async () => {
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
       const { fakeUser } = await createFakeUserWithToken("Lauren");
 
       const fakeRoutine = await createFakePublicRoutine(
@@ -97,7 +105,11 @@ describe("/api/routine_activities", () => {
   });
 
   describe("DELETE /api/routine_activities/:routineActivityId (**)", () => {
+<<<<<<< HEAD
     it("Removes an activity from a routine, uses hard delete", async () => {
+=======
+    xit("Removes an activity from a routine, uses hard delete", async () => {
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
       const { fakeUser, token } = await createFakeUserWithToken("Linus");
       const fakeRoutine = await createFakePublicRoutine(
         fakeUser.id,
@@ -124,7 +136,11 @@ describe("/api/routine_activities", () => {
       );
     });
 
+<<<<<<< HEAD
     ("Logged in user should be the owner of the modified object.", async () => {
+=======
+    xit("Logged in user should be the owner of the modified object.", async () => {
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
       const { fakeUser } = await createFakeUserWithToken("Lucy");
 
       const fakeRoutine = await createFakePublicRoutine(

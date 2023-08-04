@@ -5,6 +5,7 @@ async function addActivityToRoutine({
   activityId,
   count,
   duration,
+<<<<<<< HEAD
 }) {
   // console.log('Called addActivityToRoutine()')
   try {
@@ -21,6 +22,9 @@ async function addActivityToRoutine({
     throw error;
   }
 }
+=======
+}) {}
+>>>>>>> 35259c8a1f355576745986fa934d63c4012b5ef7
 
 async function getRoutineActivityById(id) {}
 
